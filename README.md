@@ -1,1 +1,1 @@
-Slider, Acordeão, Botão, Questões, Drag
+Slider, Acordeão, Botão, Questões, Draggable, Dialogs/Pop-ups.
