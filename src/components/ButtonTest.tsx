@@ -1,7 +1,6 @@
-// IniciarButton.tsx
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Button, Box } from '@mui/material';
-import { gsap } from 'gsap';
+
 
 interface IniciarButtonProps {
     mainColor?: string;     // Cor principal do botão
@@ -17,28 +16,15 @@ const IniciarButton: React.FC<IniciarButtonProps> = ({
     children = 'INICIAR',
 }) => {
 
-    const buttonRef = useRef<HTMLButtonElement>(null);
-
-    useEffect(() => {
-        gsap.from(buttonRef.current, {
-            x: -500,        // Posição inicial: 500px para a esquerda
-            opacity: 0,     // Começa invisível para um efeito mais suave
-            duration: 1.5,  // Duração da animação
-            ease: 'power3.out', // Easing para uma desaceleração natural
-        });
-    }, []); // <-- Array vazio significa "rodar uma vez após a montagem"
-
     return (
         <Box
-            ref={buttonRef}
+
             sx={{
                 position: 'relative',
                 display: 'inline-block',
             }}
         >
-            {/* Sombra personalizada */}
             <Box
-
                 sx={{
                     position: 'absolute',
                     top: 8,
@@ -50,8 +36,6 @@ const IniciarButton: React.FC<IniciarButtonProps> = ({
                     zIndex: 0,
                 }}
             />
-
-            {/* Botão principal com cores dinâmicas */}
             <Button
                 variant="contained"
                 sx={{
