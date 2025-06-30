@@ -1,4 +1,4 @@
-import { duration, Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 import { useEffect, type ReactElement } from 'react';
 
 import gsap from 'gsap'
@@ -28,6 +28,8 @@ interface FooterProps {
     svg3Right?: string;
     svg3Left?: string;
     svg3Animation?: string;
+
+    onButtonClick: () => void;
 }
 
 
@@ -55,6 +57,8 @@ const Section03: React.FC<FooterProps> = ({
     svg3Right,
     svg3Left,
     svg3Animation,
+
+    onButtonClick,
 }) => {
 
     useEffect(() => {
@@ -104,6 +108,9 @@ const Section03: React.FC<FooterProps> = ({
                         {svg3}
                     </Grid>
                 </Grid>
+            </Grid>
+            <Grid container justifyContent={"center"} zIndex={4}>
+                <Button variant='contained' onClick={onButtonClick}>Alex</Button>
             </Grid>
         </Grid>
     )

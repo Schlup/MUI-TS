@@ -1,10 +1,14 @@
 import { Grid } from '@mui/material'
-import Section01 from './pages/Section01'
-import Section02 from './pages/Section02'
-import Navbar from './components/Navbar'
+// import Section01 from './pages/Section01'
+// import Section02 from './pages/Section02'
+// import Navbar from './components/Navbar'
 import Section03 from './pages/Section03'
 
 function App() {
+  const handleClick = () => {
+    console.log(1)
+  }
+
   return (
     <Grid>
       <Section03
@@ -22,6 +26,8 @@ function App() {
         svg3Bottom='0'
         svg3Right='0'
         svg3Animation='c'
+
+        onButtonClick={handleClick}
       />
       {/* <Navbar />
       <Section01 />
