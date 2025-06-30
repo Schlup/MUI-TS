@@ -5,10 +5,7 @@ import { useEffect, useRef } from "react";
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ExpandableCard from "../components/ExpandingBox";
-import Exclamation from "../assets/images/Exclamation";
-import Exclamation2 from "../assets/images/Exclamation2";
-import ExpandableBox from "../components/ExpandingBox";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,14 +53,6 @@ function Section01() {
                                 Começar
                             </IniciarButton>
                         </Box>
-                        <Grid container>
-                            <ExpandableCard icon={<Exclamation />} icon2={<Exclamation2 />}>
-                                <Typography>
-                                    Este é o texto que aparece entre os ícones!
-                                </Typography>
-                            </ExpandableCard>
-                        </Grid>
-                        <ExpandableBox icon={<Exclamation />} expandedText="This is the hidden text revealed!" />
                     </Grid>
                 </Grid>
             </Grid>

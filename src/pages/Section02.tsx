@@ -1,5 +1,4 @@
 import { Grid, Typography } from "@mui/material"
-
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from "react";
